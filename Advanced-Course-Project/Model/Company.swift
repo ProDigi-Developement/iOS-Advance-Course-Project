@@ -25,11 +25,12 @@ public class Company: Mappable {
     public func mapping(map: Map) {
         jobs        <- map["jobs"]
         name        <- map["name"]
+        logo        <- map["logo"]
         size        <- map["size"]
-        photo       <- map["photo"]
         contact     <- map["contact"]
         website     <- map["website"]
         techStack   <- map["techStack"]
+        description <- map["description"]
     }
     
     public func setJobs(_ jobs: [Job]) {

@@ -23,11 +23,11 @@ public class Job: Mappable {
     
     public func mapping(map: Map) {
         title       <- map["title"]
-        description <- map["description"]
-        startDate   <- map["startDate"]
-        postingDate <- map["postingDate"]
         salary      <- map["salary"]
         benefits    <- map["benefits"]
+        startDate   <- map["startDate"]
+        postingDate <- map["postingDate"]
+        description <- map["description"]
     }
     
     public func setTitle(_ title: String) {
