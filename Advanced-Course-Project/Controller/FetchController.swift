@@ -20,6 +20,7 @@ internal class FetchController {
     
     private init() {
         // Nothing :)
+        doLogin(onSuccess: {}, onFail: {_ in})
     }
     
     public func doLogin(onSuccess: @escaping () -> Void, onFail: @escaping (Error) -> Void) {
@@ -74,9 +75,9 @@ internal class FetchController {
 extension FetchController {
     internal func fetchAllStudents(onSuccess: @escaping ([Student]) -> Void, onFail: @escaping (Error) -> Void) {
         self.doLogin(onSuccess: {
-            let url: String = "https://pro-digi-advanced.firebaseio.com/student/studentId.json?auth=\(self.token)"
+            let url: String = "https://pro-digi-advanced.firebaseio.com/student.json?auth=\(self.token)"
             
-            Alamofire.request(url).validate().responseArray { (response: DataResponse<[Student]>) in
+            Alamofire.request(url, method: .get).validate().responseArray { (response: DataResponse<[Student]>) in
                 switch response.result {
                 case .success(let value):
                     onSuccess(value)
