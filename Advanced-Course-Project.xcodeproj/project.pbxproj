@@ -114,6 +114,7 @@
 		954A6FFD204719B9003949D4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				792881D0204F811300444C9C /* AlamofireObjectMapper.framework */,
 				7946F335204850DC00C62711 /* ObjectMapper.framework */,
 				954A6FFA204719A2003949D4 /* Alamofire.framework */,
 			);
@@ -123,7 +124,6 @@
 		95A5B7B220470FCD00445D7C = {
 			isa = PBXGroup;
 			children = (
-				792881D0204F811300444C9C /* AlamofireObjectMapper.framework */,
 				95A5B7BD20470FCD00445D7C /* Advanced-Course-Project */,
 				954A6FFD204719B9003949D4 /* Frameworks */,
 				95A5B7BC20470FCD00445D7C /* Products */,
