@@ -17,7 +17,6 @@
 		7926D476204855780019A480 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7926D475204855780019A480 /* Job.swift */; };
 		792881D1204F811300444C9C /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 792881D0204F811300444C9C /* AlamofireObjectMapper.framework */; };
 		792881D2204F811300444C9C /* AlamofireObjectMapper.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 792881D0204F811300444C9C /* AlamofireObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		7941E3EE205895FD0047B606 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7941E3ED205895FD0047B606 /* NetworkManager.swift */; };
 		7946F336204850DD00C62711 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7946F335204850DC00C62711 /* ObjectMapper.framework */; };
 		7946F3392048516500C62711 /* ObjectMapper.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7946F335204850DC00C62711 /* ObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7946F33B2048524000C62711 /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 954A6FFA204719A2003949D4 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -60,7 +59,6 @@
 		7926D473204855710019A480 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		7926D475204855780019A480 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
 		792881D0204F811300444C9C /* AlamofireObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireObjectMapper.framework; path = Carthage/Build/iOS/AlamofireObjectMapper.framework; sourceTree = "<group>"; };
-		7941E3ED205895FD0047B606 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		7946F335204850DC00C62711 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
 		794C4C3E2052A56000B158D9 /* JobDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailViewController.swift; sourceTree = "<group>"; };
 		794C4C402052AC5600B158D9 /* CompanyDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDetailViewController.swift; sourceTree = "<group>"; };
@@ -96,7 +94,6 @@
 			isa = PBXGroup;
 			children = (
 				163AD5B8205829D8009B7487 /* Constants.swift */,
-				7941E3ED205895FD0047B606 /* NetworkManager.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -290,7 +287,6 @@
 				16C46A3D204C3D11008C74CC /* JobListViewController.swift in Sources */,
 				7926D476204855780019A480 /* Job.swift in Sources */,
 				163AD5B9205829D8009B7487 /* Constants.swift in Sources */,
-				7941E3EE205895FD0047B606 /* NetworkManager.swift in Sources */,
 				7926D474204855710019A480 /* Company.swift in Sources */,
 				95769BF8204F60640035B8BF /* CompanyController.swift in Sources */,
 			);
