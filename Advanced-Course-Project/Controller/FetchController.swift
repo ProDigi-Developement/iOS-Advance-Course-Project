@@ -91,3 +91,11 @@ extension FetchController {
         
     }
 }
+
+// MARK: Company
+extension FetchController {
+}
+
+// MARK: Jobs
+extension FetchController {
+}
