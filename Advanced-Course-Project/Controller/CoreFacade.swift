@@ -13,7 +13,10 @@ public class CoreFacade {
     private let jobController: JobController
     private let studentController: StudentController
     private let companyController: CompanyController
-    private let loginController: LoginController
+    
+    public var students: [Student] {
+        return self.studentController.students
+    }
     
     public var listOfStudents: [Student] {
         return self.studentController.students
@@ -26,13 +29,9 @@ public class CoreFacade {
         self.jobController = JobController()
         self.studentController = StudentController()
         self.companyController = CompanyController.shared
-        self.loginController = LoginController()
     }
     
     // MARK: Public Methods
-    public func testArchitecture() -> String {
-        return self.studentController.stubMethod()
-    }
     
     public func fetchJobs() {
         self.jobController.fetchJobs()
@@ -48,5 +47,12 @@ public class CoreFacade {
     
     public func getCompany() -> Company {
         return self.companyController.generateStubCompany()
+    }
+}
+
+// MARK: Students Methods
+extension CoreFacade {
+    public func fetchStudents(onSuccess: @escaping () -> Void, onFail: @escaping (Error) -> Void) {
+        self.studentController.fetchStudents(onSuccess: onSuccess, onFail: onFail)
     }
 }

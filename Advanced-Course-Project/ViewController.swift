@@ -13,6 +13,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("Is it alive? \(CoreFacade.shared.testArchitecture())")
+        CoreFacade.shared.fetchStudents(onSuccess: {
+            for student in CoreFacade.shared.students {
+                print("Student email: \(student.email ?? "empty")")
+            }
+        },
+                                        onFail: { error in
+            print("ERROR! \(error.localizedDescription)")
+        })
     }
 }
