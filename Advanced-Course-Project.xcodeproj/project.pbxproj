@@ -32,6 +32,7 @@
 		95A5B7C920470FCD00445D7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95A5B7C720470FCD00445D7C /* LaunchScreen.storyboard */; };
 		95A5B7D4204711EA00445D7C /* CoreFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A5B7D3204711EA00445D7C /* CoreFacade.swift */; };
 		95A5B7D62047124900445D7C /* StudentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A5B7D52047124900445D7C /* StudentController.swift */; };
+		95F826652058A2B900BFAD3D /* FetchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F826642058A2B900BFAD3D /* FetchController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -74,6 +75,7 @@
 		95A5B7CA20470FCD00445D7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95A5B7D3204711EA00445D7C /* CoreFacade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreFacade.swift; sourceTree = "<group>"; };
 		95A5B7D52047124900445D7C /* StudentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentController.swift; sourceTree = "<group>"; };
+		95F826642058A2B900BFAD3D /* FetchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +174,7 @@
 				95A5B7D52047124900445D7C /* StudentController.swift */,
 				95769BF7204F60640035B8BF /* CompanyController.swift */,
 				163E9CF4205889C10007E797 /* LoginController.swift */,
+				95F826642058A2B900BFAD3D /* FetchController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 				7926D476204855780019A480 /* Job.swift in Sources */,
 				163AD5B9205829D8009B7487 /* Constants.swift in Sources */,
 				7926D474204855710019A480 /* Company.swift in Sources */,
+				95F826652058A2B900BFAD3D /* FetchController.swift in Sources */,
 				95769BF8204F60640035B8BF /* CompanyController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
