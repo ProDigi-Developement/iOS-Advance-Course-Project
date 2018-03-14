@@ -25,7 +25,6 @@
 		796C16C220484EE400722935 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796C16C120484EE400722935 /* Student.swift */; };
 		95769BF8204F60640035B8BF /* CompanyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95769BF7204F60640035B8BF /* CompanyController.swift */; };
 		95A5B7BF20470FCD00445D7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A5B7BE20470FCD00445D7C /* AppDelegate.swift */; };
-		95A5B7C120470FCD00445D7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A5B7C020470FCD00445D7C /* ViewController.swift */; };
 		95A5B7C420470FCD00445D7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95A5B7C220470FCD00445D7C /* Main.storyboard */; };
 		95A5B7C620470FCD00445D7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95A5B7C520470FCD00445D7C /* Assets.xcassets */; };
 		95A5B7C920470FCD00445D7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95A5B7C720470FCD00445D7C /* LaunchScreen.storyboard */; };
@@ -66,7 +65,6 @@
 		95769BF7204F60640035B8BF /* CompanyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyController.swift; sourceTree = "<group>"; };
 		95A5B7BB20470FCD00445D7C /* Advanced-Course-Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Advanced-Course-Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95A5B7BE20470FCD00445D7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		95A5B7C020470FCD00445D7C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		95A5B7C320470FCD00445D7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		95A5B7C520470FCD00445D7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		95A5B7C820470FCD00445D7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -144,7 +142,6 @@
 				163AD5B7205829B4009B7487 /* Utilities */,
 				95A5B7CA20470FCD00445D7C /* Info.plist */,
 				95A5B7BE20470FCD00445D7C /* AppDelegate.swift */,
-				95A5B7C020470FCD00445D7C /* ViewController.swift */,
 				95A5B7C520470FCD00445D7C /* Assets.xcassets */,
 			);
 			path = "Advanced-Course-Project";
@@ -279,7 +276,6 @@
 				95A5B7D4204711EA00445D7C /* CoreFacade.swift in Sources */,
 				794C4C412052AC5600B158D9 /* CompanyDetailViewController.swift in Sources */,
 				95A5B7D62047124900445D7C /* StudentController.swift in Sources */,
-				95A5B7C120470FCD00445D7C /* ViewController.swift in Sources */,
 				794C4C3F2052A56000B158D9 /* JobDetailViewController.swift in Sources */,
 				796C16C220484EE400722935 /* Student.swift in Sources */,
 				95A5B7BF20470FCD00445D7C /* AppDelegate.swift in Sources */,
