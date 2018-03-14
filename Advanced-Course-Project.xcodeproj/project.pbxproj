@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		163AD5B9205829D8009B7487 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163AD5B8205829D8009B7487 /* Constants.swift */; };
-		163E9CF5205889C10007E797 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163E9CF4205889C10007E797 /* LoginController.swift */; };
 		16C46A3A204C390D008C74CC /* JobTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C46A38204C390D008C74CC /* JobTableCell.swift */; };
 		16C46A3B204C390D008C74CC /* JobTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16C46A39204C390D008C74CC /* JobTableCell.xib */; };
 		16C46A3D204C3D11008C74CC /* JobListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C46A3C204C3D11008C74CC /* JobListViewController.swift */; };
@@ -52,7 +51,6 @@
 
 /* Begin PBXFileReference section */
 		163AD5B8205829D8009B7487 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		163E9CF4205889C10007E797 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		16C46A38204C390D008C74CC /* JobTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobTableCell.swift; sourceTree = "<group>"; };
 		16C46A39204C390D008C74CC /* JobTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JobTableCell.xib; sourceTree = "<group>"; };
 		16C46A3C204C3D11008C74CC /* JobListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListViewController.swift; sourceTree = "<group>"; };
@@ -173,7 +171,6 @@
 				16C46A3E204C3EF0008C74CC /* JobController.swift */,
 				95A5B7D52047124900445D7C /* StudentController.swift */,
 				95769BF7204F60640035B8BF /* CompanyController.swift */,
-				163E9CF4205889C10007E797 /* LoginController.swift */,
 				95F826642058A2B900BFAD3D /* FetchController.swift */,
 			);
 			path = Controller;
@@ -281,7 +278,6 @@
 				16C46A3F204C3EF0008C74CC /* JobController.swift in Sources */,
 				95A5B7D4204711EA00445D7C /* CoreFacade.swift in Sources */,
 				794C4C412052AC5600B158D9 /* CompanyDetailViewController.swift in Sources */,
-				163E9CF5205889C10007E797 /* LoginController.swift in Sources */,
 				95A5B7D62047124900445D7C /* StudentController.swift in Sources */,
 				95A5B7C120470FCD00445D7C /* ViewController.swift in Sources */,
 				794C4C3F2052A56000B158D9 /* JobDetailViewController.swift in Sources */,
