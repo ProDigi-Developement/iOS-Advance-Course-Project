@@ -11,20 +11,29 @@ import Alamofire
 import AlamofireObjectMapper
 
 typealias studentSuccess = (Student) -> Void
+typealias companySuccess = (Company) -> Void
 
 class NetworkManager {
     
     class func fetchStudent(url: String, handler: @escaping studentSuccess) {
-        
         Alamofire.request(url).validate().responseObject { (response: DataResponse<Student>) in
-
             switch response.result {
             case .failure(let error):
                 print(error)
             case .success(let value):
                 handler(value)
             }
-            
+        }
+    }
+    
+    class func fetchCompany(url: String, handler: @escaping companySuccess) {
+        Alamofire.request(url).validate().responseObject { (response: DataResponse<Company>) in
+            switch response.result {
+            case .failure(let error):
+                print(error)
+            case .success(let value):
+                handler(value)
+            }
         }
     }
 }
