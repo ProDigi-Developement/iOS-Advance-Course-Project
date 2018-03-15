@@ -13,13 +13,13 @@ public class CoreFacade {
     private let jobController: JobController
     private let studentController: StudentController
     private let companyController: CompanyController
-    
+
     public var students: [Student] {
         return self.studentController.students
     }
     
-    public var listOfStudents: [Student] {
-        return self.studentController.students
+    public var companies: [Company] {
+        return self.companyController.companies
     }
     
     // MARK: Singleton
@@ -54,5 +54,12 @@ public class CoreFacade {
 extension CoreFacade {
     public func fetchStudents(onSuccess: @escaping () -> Void, onFail: @escaping (Error) -> Void) {
         self.studentController.fetchStudents(onSuccess: onSuccess, onFail: onFail)
+    }
+}
+
+// MARK: Companies Methods
+extension CoreFacade {
+    public func fetchCompanies(onSuccess: @escaping () -> Void, onFail: @escaping (Error) -> Void) {
+        self.companyController.fetchCompanies(onSuccess: onSuccess, onFail: onFail)
     }
 }
