@@ -17,13 +17,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
 
-        // Test code
+        // Test code to fetch students
         CoreFacade.shared.fetchStudents(onSuccess: {
             for student in CoreFacade.shared.students {
                 print("Student email: \(student.email ?? "empty")")
             }
-        },
-                                        onFail: { error in
+        }, onFail: { error in
+            print("ERROR! \(error.localizedDescription)")
+        })
+        
+        // Test code to fetch companies
+        CoreFacade.shared.fetchCompanies(onSuccess: {
+            for company in CoreFacade.shared.companies {
+                print("Company email: \(company.email ?? "empty")")
+            }
+        }, onFail: { error in
             print("ERROR! \(error.localizedDescription)")
         })
         return true
