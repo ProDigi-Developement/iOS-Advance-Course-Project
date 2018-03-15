@@ -22,6 +22,10 @@ public class CoreFacade {
         return self.companyController.companies
     }
     
+    public var jobs: [Job] {
+        return self.jobController.jobs
+    }
+    
     // MARK: Singleton
     public static let shared: CoreFacade = CoreFacade()
     
@@ -32,11 +36,6 @@ public class CoreFacade {
     }
     
     // MARK: Public Methods
-    
-    public func fetchJobs() {
-        self.jobController.fetchJobs()
-    }
-    
     public func getJobList() -> [Job] {
         return self.jobController.jobList
     }
@@ -61,5 +60,12 @@ extension CoreFacade {
 extension CoreFacade {
     public func fetchCompanies(onSuccess: @escaping () -> Void, onFail: @escaping (Error) -> Void) {
         self.companyController.fetchCompanies(onSuccess: onSuccess, onFail: onFail)
+    }
+}
+
+// MARK: Companies Methods
+extension CoreFacade {
+    public func fetchJobs(onSuccess: @escaping () -> Void, onFail: @escaping (Error) -> Void) {
+        self.jobController.fetchJobs(onSuccess: onSuccess, onFail: onFail)
     }
 }
