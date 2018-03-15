@@ -34,6 +34,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }, onFail: { error in
             print("ERROR! \(error.localizedDescription)")
         })
+        
+        // Test code to fetch jobs
+        CoreFacade.shared.fetchJobs(onSuccess: {
+            for job in CoreFacade.shared.jobs {
+                print("Job description: \(job.description ?? "empty")")
+            }
+        }, onFail: { error in
+            print("ERROR! \(error.localizedDescription)")
+        })
+        
         return true
     }
 
