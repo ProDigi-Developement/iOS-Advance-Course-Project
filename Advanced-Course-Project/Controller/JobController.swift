@@ -33,6 +33,7 @@ internal class JobController {
     internal func fetchJobs(onSuccess: @escaping () -> Void, onFail: @escaping (Error) -> Void) {
         FetchController.shared.fetchAllJobs(onSuccess: { jobs in
             self.jobs = jobs
+            self.jobList = jobs
             onSuccess()
         }, onFail: { error in
             onFail(error)
