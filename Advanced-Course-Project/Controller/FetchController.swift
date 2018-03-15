@@ -71,7 +71,6 @@ internal class FetchController {
 }
 
 // MARK: Students
-
 extension FetchController {
     internal func fetchAllStudents(onSuccess: @escaping ([Student]) -> Void, onFail: @escaping (Error) -> Void) {
         self.doLogin(onSuccess: {
@@ -95,8 +94,44 @@ extension FetchController {
 
 // MARK: Company
 extension FetchController {
+    internal func fetchAllCompanies(onSuccess: @escaping ([Company]) -> Void, onFail: @escaping (Error) -> Void) {
+        self.doLogin(onSuccess: {
+            let url: String = "https://pro-digi-advanced.firebaseio.com/company.json?auth=\(self.token)"
+            
+            Alamofire.request(url, method: .get).validate().responseArray { (response: DataResponse<[Company]>) in
+                switch response.result {
+                case .success(let value):
+                    onSuccess(value)
+                case .failure(let error):
+                    onFail(error)
+                }
+            }
+        }, onFail: { error in
+            // TODO: Handle error scenario
+            print("ERROR: \(error.localizedDescription)")
+        })
+        
+    }
 }
 
 // MARK: Jobs
 extension FetchController {
+    internal func fetchAllJobs(onSuccess: @escaping ([Job]) -> Void, onFail: @escaping (Error) -> Void) {
+        self.doLogin(onSuccess: {
+            let url: String = "https://pro-digi-advanced.firebaseio.com/company.json?auth=\(self.token)"
+            
+            Alamofire.request(url, method: .get).validate().responseArray { (response: DataResponse<[Job]>) in
+                switch response.result {
+                case .success(let value):
+                    onSuccess(value)
+                case .failure(let error):
+                    onFail(error)
+                }
+            }
+        }, onFail: { error in
+            // TODO: Handle error scenario
+            print("ERROR: \(error.localizedDescription)")
+        })
+        
+    }
 }

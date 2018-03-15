@@ -11,7 +11,9 @@ import Alamofire
 import AlamofireObjectMapper
 
 internal class JobController {
+    
     internal private(set) var job: Job!
+    internal private(set) var jobs: [Job]!
     
     internal fileprivate(set) var jobList: [Job] {
         didSet {
@@ -28,17 +30,14 @@ internal class JobController {
         return job
     }
     
-    public func fetchJobs() {
-        guard let url = URL(string: "https://jobs.github.com/positions.json?search=mobile") else {
-            print("Couldn't get job list")
-            return
-        }
-        
-        Alamofire.request(url).responseArray { (response: DataResponse<[Job]>) in
-            if let jobArray = response.result.value {
-                self.jobList = jobArray
-            }
-        }
+    internal func fetchJobs(onSuccess: @escaping () -> Void, onFail: @escaping (Error) -> Void) {
+        FetchController.shared.fetchAllJobs(onSuccess: { jobs in
+            self.jobs = jobs
+            self.jobList = jobs
+            onSuccess()
+        }, onFail: { error in
+            onFail(error)
+        })
     }
     
     private func generateStubJob() -> Job {
