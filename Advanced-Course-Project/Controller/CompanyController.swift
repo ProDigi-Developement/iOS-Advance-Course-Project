@@ -9,10 +9,22 @@
 import Foundation
 
 public class CompanyController {
+    
+    internal private(set) var companies: [Company]!
     public static let shared: CompanyController = CompanyController()
     
     private init() {
         // Nothing :)
+    }
+    
+    internal func fetchCompanies(onSuccess: @escaping () -> Void, onFail: @escaping (Error) -> Void) {
+        FetchController.shared.fetchAllCompanies(onSuccess: { companies in
+            self.companies = companies
+            onSuccess()
+        },
+                                                onFail: { error in
+                                                    onFail(error)
+        })
     }
     
     public func listCompanies() -> [Company] {
