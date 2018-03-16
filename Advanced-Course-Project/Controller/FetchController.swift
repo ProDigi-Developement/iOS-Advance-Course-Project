@@ -118,7 +118,7 @@ extension FetchController {
 extension FetchController {
     internal func fetchAllJobs(onSuccess: @escaping ([Job]) -> Void, onFail: @escaping (Error) -> Void) {
         self.doLogin(onSuccess: {
-            let url: String = "https://pro-digi-advanced.firebaseio.com/company.json?auth=\(self.token)"
+            let url: String = "https://pro-digi-advanced.firebaseio.com/job.json?auth=\(self.token)"
             
             Alamofire.request(url, method: .get).validate().responseArray { (response: DataResponse<[Job]>) in
                 switch response.result {
