@@ -10,60 +10,50 @@ import Foundation
 
 public class CompanyController {
     
-    internal private(set) var companies: [Company]!
     public static let shared: CompanyController = CompanyController()
     
-    private init() {
-        // Nothing :)
+    internal private(set) var company: Company!
+    internal private(set) var companies: [Company]!
+    
+    internal fileprivate(set) var companyList: [Company] {
+        didSet {
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: kNOTIFICATION_JOB_LIST_CHANGED), object: nil)
+        }
+    }
+    
+    internal init() {
+        self.companyList = []
+    }
+    
+    public func fetchCompany() -> Company {
+        return fetchCompanies()[0]
+    }
+    
+    public func fetchCompanies() -> [Company] {
+        return companies
     }
     
     internal func fetchCompanies(onSuccess: @escaping () -> Void, onFail: @escaping (Error) -> Void) {
         FetchController.shared.fetchAllCompanies(onSuccess: { companies in
             self.companies = companies
+            self.companyList = companies
             onSuccess()
-        },
-                                                onFail: { error in
-                                                    onFail(error)
+        }, onFail: { error in
+            onFail(error)
         })
     }
     
-    public func listCompanies() -> [Company] {
-        return generateStubCompanies()
-    }
-    
     public func getCompanyBy(job: Job) -> Company? {
-        let companyList = self.generateStubCompanies()
-
-        for company in companyList {
-            if let jobs = company.jobs {
-                if jobs.contains(job) {
-                    return company
-                }
-            } else {
-                // TOOD: Handle error scenario
-                print("fuck 👹")
+        let companyList = self.companyList
+        
+        if companyList.count > 0 {
+            for company in companyList {
+                return company
             }
+        } else {
+            print("Error")
         }
         
         return nil
-    }
-    
-    public func generateStubCompany() -> Company {
-        let company = Company(companyId: 0, name: "Some name", email: "Some email")
-        
-        return company
-    }
-    
-    private func generateStubCompanies() -> [Company] {
-        var stubCompanies = [Company]()
-        let randomInt = Int(arc4random_uniform(16))
-        
-        for num in 0...randomInt {
-            let company = Company(companyId: 0, name: "\(num)", email: "\(num)@email.com")
-
-            stubCompanies.append(company)
-        }
-        
-        return stubCompanies
     }
 }
