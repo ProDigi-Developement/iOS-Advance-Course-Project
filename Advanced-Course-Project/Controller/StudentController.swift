@@ -12,6 +12,9 @@ import Alamofire
 import AlamofireObjectMapper
 
 internal class StudentController {
+    
+    public static let shared: StudentController = StudentController()
+    
     internal private(set) var students: [Student]!
     
     internal init() {
@@ -23,8 +26,7 @@ internal class StudentController {
         FetchController.shared.fetchAllStudents(onSuccess: { students in
             self.students = students
             onSuccess()
-        },
-                                                onFail: { error in
+        }, onFail: { error in
             onFail(error)
         })
     }
