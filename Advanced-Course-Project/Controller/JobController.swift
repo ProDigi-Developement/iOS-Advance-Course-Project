@@ -7,10 +7,10 @@
 //
 
 import Foundation
-import Alamofire
-import AlamofireObjectMapper
 
 internal class JobController {
+    
+    public static let shared: JobController = JobController()
     
     internal private(set) var job: Job!
     internal private(set) var jobs: [Job]!
@@ -23,11 +23,14 @@ internal class JobController {
     
     internal init() {
         self.jobList = []
-        self.job = generateStubJob()
     }
     
     public func fetchJob() -> Job {
-        return job
+        return fetchJobs()[0]
+    }
+    
+    public func fetchJobs() -> [Job] {
+        return jobs
     }
     
     internal func fetchJobs(onSuccess: @escaping () -> Void, onFail: @escaping (Error) -> Void) {
@@ -39,17 +42,5 @@ internal class JobController {
             onFail(error)
         })
     }
-    
-    private func generateStubJob() -> Job {
-        let job = Job()
-        
-        job.setTitle("Software Engineer")
-        job.setSalary("$120,000.00")
-        job.setBenefits("Health Care and $10,000.00 anual bonus")
-        job.setStartDate("01/05/2018")
-        job.setPostingDate("01/03/2018")
-        job.setDescription("This role expects the candidate to be an expert in...")
-        
-        return job
-    }
+
 }
