@@ -20,28 +20,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Test code to fetch students
         CoreFacade.shared.fetchStudents(onSuccess: {
             for student in CoreFacade.shared.students {
-                print("Student email: \(student.email ?? "empty")")
+                print("Student name: \(student.name ?? "empty")")
             }
         }, onFail: { error in
-            print("ERROR! \(error.localizedDescription)")
+            print("Error: \(error.localizedDescription)")
         })
         
         // Test code to fetch companies
         CoreFacade.shared.fetchCompanies(onSuccess: {
             for company in CoreFacade.shared.companies {
-                print("Company email: \(company.email ?? "empty")")
+                print("Company name: \(company.name ?? "empty")")
             }
         }, onFail: { error in
-            print("ERROR! \(error.localizedDescription)")
+            print("Error: \(error.localizedDescription)")
         })
         
         // Test code to fetch jobs
         CoreFacade.shared.fetchJobs(onSuccess: {
             for job in CoreFacade.shared.jobs {
-                print("Job description: \(job.description ?? "empty")")
+                print("Job salary: \(job.salary ?? "empty")")
             }
         }, onFail: { error in
-            print("ERROR! \(error.localizedDescription)")
+            print("Error: \(error.localizedDescription)")
         })
         
         return true
