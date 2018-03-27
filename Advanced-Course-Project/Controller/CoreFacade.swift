@@ -11,48 +11,52 @@ import Foundation
 public class CoreFacade {
     
     private let jobController: JobController
-    private let studentController: StudentController
     private let companyController: CompanyController
+    private let studentController: StudentController
 
-    public var students: [Student] {
-        return self.studentController.students
+    public var jobs: [Job] {
+        return self.jobController.jobs
     }
     
     public var companies: [Company] {
         return self.companyController.companies
     }
     
-    public var jobs: [Job] {
-        return self.jobController.jobs
+    public var students: [Student] {
+        return self.studentController.students
     }
     
     // MARK: Singleton
     public static let shared: CoreFacade = CoreFacade()
     
     private init() {
-        self.jobController = JobController()
-        self.studentController = StudentController()
+        self.jobController = JobController.shared
         self.companyController = CompanyController.shared
+        self.studentController = StudentController.shared
     }
     
     // MARK: Public Methods
-    public func getJobList() -> [Job] {
-        return self.jobController.jobList
-    }
-    
     public func getJob() -> Job {
         return self.jobController.fetchJob()
     }
     
+    public func getJobList() -> [Job] {
+        return self.jobController.jobList
+    }
+    
     public func getCompany() -> Company {
-        return self.companyController.generateStubCompany()
+        return self.companyController.fetchCompany()
+    }
+    
+    public func getCompanyList() -> [Company]? {
+        return self.companyController.companyList
     }
 }
 
-// MARK: Students Methods
+// MARK: Jobs Methods
 extension CoreFacade {
-    public func fetchStudents(onSuccess: @escaping () -> Void, onFail: @escaping (Error) -> Void) {
-        self.studentController.fetchStudents(onSuccess: onSuccess, onFail: onFail)
+    public func fetchJobs(onSuccess: @escaping () -> Void, onFail: @escaping (Error) -> Void) {
+        self.jobController.fetchJobs(onSuccess: onSuccess, onFail: onFail)
     }
 }
 
@@ -63,9 +67,9 @@ extension CoreFacade {
     }
 }
 
-// MARK: Companies Methods
+// MARK: Students Methods
 extension CoreFacade {
-    public func fetchJobs(onSuccess: @escaping () -> Void, onFail: @escaping (Error) -> Void) {
-        self.jobController.fetchJobs(onSuccess: onSuccess, onFail: onFail)
+    public func fetchStudents(onSuccess: @escaping () -> Void, onFail: @escaping (Error) -> Void) {
+        self.studentController.fetchStudents(onSuccess: onSuccess, onFail: onFail)
     }
 }
