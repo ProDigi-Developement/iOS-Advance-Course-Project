@@ -166,8 +166,8 @@
 			children = (
 				95A5B7D3204711EA00445D7C /* CoreFacade.swift */,
 				16C46A3E204C3EF0008C74CC /* JobController.swift */,
-				95A5B7D52047124900445D7C /* StudentController.swift */,
 				95769BF7204F60640035B8BF /* CompanyController.swift */,
+				95A5B7D52047124900445D7C /* StudentController.swift */,
 				95F826642058A2B900BFAD3D /* FetchController.swift */,
 			);
 			path = Controller;

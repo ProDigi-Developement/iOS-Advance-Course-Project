@@ -11,9 +11,9 @@ import UIKit
 class CompanyDetailViewController: UIViewController {
     
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var logoLabel: UILabel!
     @IBOutlet weak var sizeLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var photoLabel: UILabel!
     @IBOutlet weak var contactLabel: UILabel!
     @IBOutlet weak var websiteLabel: UILabel!
@@ -26,14 +26,14 @@ class CompanyDetailViewController: UIViewController {
         let company = CoreFacade.shared.getCompany()
         
         nameLabel.text = company.name
+        logoLabel.text = company.logo
+        sizeLabel.text = company.size
         emailLabel.text = company.email
-        logoLabel.text = "This is a logo"
-        sizeLabel.text = "1000+"
-        photoLabel.text = "This is a photo"
-        contactLabel.text = "647-675-3412"
-        websiteLabel.text = "https://www.gcrozariol.com/"
-        techStackLabel.text = "IT"
-        descriptionLabel.text = "This company has been developing apps..."
+        photoLabel.text = company.photo
+        contactLabel.text = company.contact
+        websiteLabel.text = company.website
+        techStackLabel.text = company.techStack
+        descriptionLabel.text = company.description
     }
     
 }

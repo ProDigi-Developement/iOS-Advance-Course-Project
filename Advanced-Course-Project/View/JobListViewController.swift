@@ -48,7 +48,8 @@ extension JobListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath:IndexPath) -> UITableViewCell {
-//        let job = CoreFacade.shared.getJobList()[indexPath.row]
+        let job = CoreFacade.shared.jobs[indexPath.row]
+        let company = CoreFacade.shared.companies[indexPath.row]
         let rawCell = tableView.dequeueReusableCell(withIdentifier: cellNameAndId)
         
         guard let jobCell = rawCell as? JobTableCell else {
@@ -56,9 +57,9 @@ extension JobListViewController: UITableViewDataSource {
             return rawCell!
         }
         
-        jobCell.setJobTitle("Title")
-        jobCell.setCompany("Company")
-        jobCell.setDate("Date")
+        jobCell.setJobTitle(job.title ?? "Title not found")
+        jobCell.setDate(job.startDate ?? "Date not found")
+        jobCell.setCompany(company.name ?? "Company not found")
         
         return jobCell
     }
