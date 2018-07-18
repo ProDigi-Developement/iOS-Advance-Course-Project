@@ -7,13 +7,27 @@
 //
 
 import Foundation
+import Darwin
+import Alamofire
+import AlamofireObjectMapper
 
 internal class StudentController {
+    
+    public static let shared: StudentController = StudentController()
+    
+    internal private(set) var students: [Student]!
+    
     internal init() {
-        // do nothing :)
+        self.students = [Student]()
+        self.fetchStudents(onSuccess: {}, onFail: {_ in })
     }
     
-    internal func stubMethod() -> String {
-        return "It's alive!"
+    internal func fetchStudents(onSuccess: @escaping () -> Void, onFail: @escaping (Error) -> Void) {
+        FetchController.shared.fetchAllStudents(onSuccess: { students in
+            self.students = students
+            onSuccess()
+        }, onFail: { error in
+            onFail(error)
+        })
     }
 }

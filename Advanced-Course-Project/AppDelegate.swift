@@ -16,6 +16,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+
+        // Test code to fetch students
+        CoreFacade.shared.fetchStudents(onSuccess: {
+            for student in CoreFacade.shared.students {
+                print("Student name: \(student.name ?? "empty")")
+            }
+        }, onFail: { error in
+            print("Error: \(error.localizedDescription)")
+        })
+        
+        // Test code to fetch companies
+        CoreFacade.shared.fetchCompanies(onSuccess: {
+            for company in CoreFacade.shared.companies {
+                print("Company name: \(company.name ?? "empty")")
+            }
+        }, onFail: { error in
+            print("Error: \(error.localizedDescription)")
+        })
+        
+        // Test code to fetch jobs
+        CoreFacade.shared.fetchJobs(onSuccess: {
+            for job in CoreFacade.shared.jobs {
+                print("Job salary: \(job.salary ?? "empty")")
+            }
+        }, onFail: { error in
+            print("Error: \(error.localizedDescription)")
+        })
+        
         return true
     }
 

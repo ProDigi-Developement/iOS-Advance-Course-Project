@@ -7,42 +7,71 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		954A6FFB204719A2003949D4 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 954A6FFA204719A2003949D4 /* Alamofire.framework */; };
-		954A6FFC204719A2003949D4 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 954A6FFA204719A2003949D4 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		163AD5B9205829D8009B7487 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163AD5B8205829D8009B7487 /* Constants.swift */; };
+		16C46A3A204C390D008C74CC /* JobTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C46A38204C390D008C74CC /* JobTableCell.swift */; };
+		16C46A3B204C390D008C74CC /* JobTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16C46A39204C390D008C74CC /* JobTableCell.xib */; };
+		16C46A3D204C3D11008C74CC /* JobListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C46A3C204C3D11008C74CC /* JobListViewController.swift */; };
+		16C46A3F204C3EF0008C74CC /* JobController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C46A3E204C3EF0008C74CC /* JobController.swift */; };
+		7926D474204855710019A480 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7926D473204855710019A480 /* Company.swift */; };
+		7926D476204855780019A480 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7926D475204855780019A480 /* Job.swift */; };
+		792881D1204F811300444C9C /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 792881D0204F811300444C9C /* AlamofireObjectMapper.framework */; };
+		792881D2204F811300444C9C /* AlamofireObjectMapper.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 792881D0204F811300444C9C /* AlamofireObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7946F336204850DD00C62711 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7946F335204850DC00C62711 /* ObjectMapper.framework */; };
+		7946F3392048516500C62711 /* ObjectMapper.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7946F335204850DC00C62711 /* ObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7946F33B2048524000C62711 /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 954A6FFA204719A2003949D4 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7946F33C2048528C00C62711 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 954A6FFA204719A2003949D4 /* Alamofire.framework */; };
+		794C4C3F2052A56000B158D9 /* JobDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794C4C3E2052A56000B158D9 /* JobDetailViewController.swift */; };
+		794C4C412052AC5600B158D9 /* CompanyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794C4C402052AC5600B158D9 /* CompanyDetailViewController.swift */; };
+		796C16C220484EE400722935 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796C16C120484EE400722935 /* Student.swift */; };
+		95769BF8204F60640035B8BF /* CompanyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95769BF7204F60640035B8BF /* CompanyController.swift */; };
 		95A5B7BF20470FCD00445D7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A5B7BE20470FCD00445D7C /* AppDelegate.swift */; };
-		95A5B7C120470FCD00445D7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A5B7C020470FCD00445D7C /* ViewController.swift */; };
 		95A5B7C420470FCD00445D7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95A5B7C220470FCD00445D7C /* Main.storyboard */; };
 		95A5B7C620470FCD00445D7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95A5B7C520470FCD00445D7C /* Assets.xcassets */; };
 		95A5B7C920470FCD00445D7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95A5B7C720470FCD00445D7C /* LaunchScreen.storyboard */; };
 		95A5B7D4204711EA00445D7C /* CoreFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A5B7D3204711EA00445D7C /* CoreFacade.swift */; };
 		95A5B7D62047124900445D7C /* StudentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A5B7D52047124900445D7C /* StudentController.swift */; };
+		95F826652058A2B900BFAD3D /* FetchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F826642058A2B900BFAD3D /* FetchController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		954A6FF6204718B9003949D4 /* Embed Frameworks */ = {
+		7946F3372048512700C62711 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				954A6FFC204719A2003949D4 /* Alamofire.framework in Embed Frameworks */,
+				7946F3392048516500C62711 /* ObjectMapper.framework in CopyFiles */,
+				792881D2204F811300444C9C /* AlamofireObjectMapper.framework in CopyFiles */,
+				7946F33B2048524000C62711 /* Alamofire.framework in CopyFiles */,
 			);
-			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		163AD5B8205829D8009B7487 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		16C46A38204C390D008C74CC /* JobTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobTableCell.swift; sourceTree = "<group>"; };
+		16C46A39204C390D008C74CC /* JobTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JobTableCell.xib; sourceTree = "<group>"; };
+		16C46A3C204C3D11008C74CC /* JobListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListViewController.swift; sourceTree = "<group>"; };
+		16C46A3E204C3EF0008C74CC /* JobController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobController.swift; sourceTree = "<group>"; };
+		7926D473204855710019A480 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
+		7926D475204855780019A480 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
+		792881D0204F811300444C9C /* AlamofireObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireObjectMapper.framework; path = Carthage/Build/iOS/AlamofireObjectMapper.framework; sourceTree = "<group>"; };
+		7946F335204850DC00C62711 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
+		794C4C3E2052A56000B158D9 /* JobDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailViewController.swift; sourceTree = "<group>"; };
+		794C4C402052AC5600B158D9 /* CompanyDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDetailViewController.swift; sourceTree = "<group>"; };
+		796C16C120484EE400722935 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		954A6FFA204719A2003949D4 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		95769BF7204F60640035B8BF /* CompanyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyController.swift; sourceTree = "<group>"; };
 		95A5B7BB20470FCD00445D7C /* Advanced-Course-Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Advanced-Course-Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95A5B7BE20470FCD00445D7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		95A5B7C020470FCD00445D7C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		95A5B7C320470FCD00445D7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		95A5B7C520470FCD00445D7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		95A5B7C820470FCD00445D7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		95A5B7CA20470FCD00445D7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95A5B7D3204711EA00445D7C /* CoreFacade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreFacade.swift; sourceTree = "<group>"; };
 		95A5B7D52047124900445D7C /* StudentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentController.swift; sourceTree = "<group>"; };
+		95F826642058A2B900BFAD3D /* FetchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,16 +79,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				954A6FFB204719A2003949D4 /* Alamofire.framework in Frameworks */,
+				7946F33C2048528C00C62711 /* Alamofire.framework in Frameworks */,
+				792881D1204F811300444C9C /* AlamofireObjectMapper.framework in Frameworks */,
+				7946F336204850DD00C62711 /* ObjectMapper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		163AD5B7205829B4009B7487 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				163AD5B8205829D8009B7487 /* Constants.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		796C16C020484ED400722935 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				796C16C120484EE400722935 /* Student.swift */,
+				7926D473204855710019A480 /* Company.swift */,
+				7926D475204855780019A480 /* Job.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		954A6FFD204719B9003949D4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				792881D0204F811300444C9C /* AlamofireObjectMapper.framework */,
+				7946F335204850DC00C62711 /* ObjectMapper.framework */,
 				954A6FFA204719A2003949D4 /* Alamofire.framework */,
 			);
 			name = Frameworks;
@@ -85,13 +136,13 @@
 		95A5B7BD20470FCD00445D7C /* Advanced-Course-Project */ = {
 			isa = PBXGroup;
 			children = (
+				796C16C020484ED400722935 /* Model */,
+				95A5B7D02047101800445D7C /* View */,
+				95A5B7D12047118F00445D7C /* Controller */,
+				163AD5B7205829B4009B7487 /* Utilities */,
 				95A5B7CA20470FCD00445D7C /* Info.plist */,
 				95A5B7BE20470FCD00445D7C /* AppDelegate.swift */,
-				95A5B7C020470FCD00445D7C /* ViewController.swift */,
 				95A5B7C520470FCD00445D7C /* Assets.xcassets */,
-				95A5B7D12047118F00445D7C /* Controller */,
-				95A5B7D22047119700445D7C /* Model */,
-				95A5B7D02047101800445D7C /* View */,
 			);
 			path = "Advanced-Course-Project";
 			sourceTree = "<group>";
@@ -101,6 +152,11 @@
 			children = (
 				95A5B7C720470FCD00445D7C /* LaunchScreen.storyboard */,
 				95A5B7C220470FCD00445D7C /* Main.storyboard */,
+				16C46A39204C390D008C74CC /* JobTableCell.xib */,
+				16C46A38204C390D008C74CC /* JobTableCell.swift */,
+				16C46A3C204C3D11008C74CC /* JobListViewController.swift */,
+				794C4C3E2052A56000B158D9 /* JobDetailViewController.swift */,
+				794C4C402052AC5600B158D9 /* CompanyDetailViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -109,16 +165,12 @@
 			isa = PBXGroup;
 			children = (
 				95A5B7D3204711EA00445D7C /* CoreFacade.swift */,
+				16C46A3E204C3EF0008C74CC /* JobController.swift */,
+				95769BF7204F60640035B8BF /* CompanyController.swift */,
 				95A5B7D52047124900445D7C /* StudentController.swift */,
+				95F826642058A2B900BFAD3D /* FetchController.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		95A5B7D22047119700445D7C /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,7 +183,7 @@
 				95A5B7B720470FCD00445D7C /* Sources */,
 				95A5B7B820470FCD00445D7C /* Frameworks */,
 				95A5B7B920470FCD00445D7C /* Resources */,
-				954A6FF6204718B9003949D4 /* Embed Frameworks */,
+				7946F3372048512700C62711 /* CopyFiles */,
 				95A5B7D7204715C300445D7C /* Carthage Framework Release Script */,
 			);
 			buildRules = (
@@ -182,6 +234,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16C46A3B204C390D008C74CC /* JobTableCell.xib in Resources */,
 				95A5B7C920470FCD00445D7C /* LaunchScreen.storyboard in Resources */,
 				95A5B7C620470FCD00445D7C /* Assets.xcassets in Resources */,
 				95A5B7C420470FCD00445D7C /* Main.storyboard in Resources */,
@@ -198,10 +251,14 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ObjectMapper.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/AlamofireObjectMapper.framework",
 			);
 			name = "Carthage Framework Release Script";
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/ObjectMapper.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/AlamofireObjectMapper.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -214,10 +271,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16C46A3A204C390D008C74CC /* JobTableCell.swift in Sources */,
+				16C46A3F204C3EF0008C74CC /* JobController.swift in Sources */,
 				95A5B7D4204711EA00445D7C /* CoreFacade.swift in Sources */,
+				794C4C412052AC5600B158D9 /* CompanyDetailViewController.swift in Sources */,
 				95A5B7D62047124900445D7C /* StudentController.swift in Sources */,
-				95A5B7C120470FCD00445D7C /* ViewController.swift in Sources */,
+				794C4C3F2052A56000B158D9 /* JobDetailViewController.swift in Sources */,
+				796C16C220484EE400722935 /* Student.swift in Sources */,
 				95A5B7BF20470FCD00445D7C /* AppDelegate.swift in Sources */,
+				16C46A3D204C3D11008C74CC /* JobListViewController.swift in Sources */,
+				7926D476204855780019A480 /* Job.swift in Sources */,
+				163AD5B9205829D8009B7487 /* Constants.swift in Sources */,
+				7926D474204855710019A480 /* Company.swift in Sources */,
+				95F826652058A2B900BFAD3D /* FetchController.swift in Sources */,
+				95769BF8204F60640035B8BF /* CompanyController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,7 +427,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = "Advance-Course-Project/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Advanced-Course-Project/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.prodigi.Advance-Course-Project";
@@ -380,7 +447,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = "Advance-Course-Project/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Advanced-Course-Project/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.prodigi.Advance-Course-Project";
